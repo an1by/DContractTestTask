@@ -1,6 +1,6 @@
 import { JWT } from 'google-auth-library';
 import { GoogleSpreadsheet, GoogleSpreadsheetWorksheet } from 'google-spreadsheet';
-import { USER_FIELDS, UserField } from '../types/UserField';
+import { USER_FIELDS } from '../types/UserField';
 import { UserRow } from '../types/UserRow';
 
 export default class Sheet {
@@ -21,12 +21,6 @@ export default class Sheet {
     this.sheet = this.document.sheetsById[0];
     await this.sheet.clear();
     await this.sheet.setHeaderRow(USER_FIELDS);
-
-    let firstRow: { [id: string] : UserField; } = {};
-    for (let field of USER_FIELDS) {
-      firstRow[field] = field;
-    }
-    await this.sheet.addRow(firstRow);
   }
 
   async fillSheet(clients: UserRow[]) {
