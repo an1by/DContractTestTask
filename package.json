@@ -1,0 +1,36 @@
+{
+  "name": "dcontract_test_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "author": "An1by",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --watch src/**/*.ts --exec ts-node ./src/app.ts",
+    "build": "tsc",
+    "start": "node ./dist/app.js",
+    "lint": "eslint --fix --quiet src/**/*.ts",
+    "format": "prettier --loglevel silent --write src/**/*.ts"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "google-auth-library": "^9.15.0",
+    "google-spreadsheet": "^4.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.1",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "typescript-eslint-parser": "^21.0.2"
+  }
+}
